@@ -79,7 +79,7 @@ Page resource error:
           },
         ),
       )
-      ..clearCache()
+      
       ..addJavaScriptChannel(
         'Toaster',
         onMessageReceived: (JavaScriptMessage message) {
@@ -87,8 +87,8 @@ Page resource error:
             SnackBar(content: Text(message.message)),
           );
         },
-      )
-      ..loadRequest(Uri.parse('https://websitedemos.net/recycled-shoe-store-04/'));
+      );
+      // ..loadRequest(Uri.parse('https://websitedemos.net/recycled-shoe-store-04/'));
 
     // #docregion platform_features
     if (controller.platform is AndroidWebViewController) {
